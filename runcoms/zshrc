@@ -12,3 +12,12 @@ fi
 
 # Customize to your needs...
 
+alias tmux="TERM=screen-256color-bce tmux"
+# alias hgdiff="hg diff|pygmentize -O style=native -l diff -f console256|less -R"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+source ~/.nvm/nvm.sh > /dev/null 2>&1
+nvm use v0.10 > /dev/null 2>&1
+
+#export PATH="$PATH:/usr/local/opt/mongodb/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin/"
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin/"
+export GOPATH=/Users/onur/.go
