@@ -1,3 +1,14 @@
+#
+# Sets Prezto options.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+#
+# General
+#
+
 # Set case-sensitivity for completion, history lookup, etc.
 # zstyle ':prezto:*:*' case-sensitive 'yes'
 
@@ -20,20 +31,15 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'spectrum' \
   'utility' \
-  'homebrew' \
-  'osx' \
   'completion' \
-  'syntax-highlighting' \
-  'history-substring-search' \
   'prompt'
-#  'tmux' \
 
 #
 # Editor
 #
 
 # Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':prezto:module:editor' key-bindings 'vi'
+zstyle ':prezto:module:editor' key-bindings 'emacs'
 
 # Auto convert .... to ../..
 # zstyle ':prezto:module:editor' dot-expansion 'yes'
@@ -58,15 +64,12 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 
 # Set the query found color.
 # zstyle ':prezto:module:history-substring-search:color' found ''
-zstyle ':prezto:module:history-substring-search:color' found 'fg=004'
 
 # Set the query not found color.
 # zstyle ':prezto:module:history-substring-search:color' not-found ''
-zstyle ':prezto:module:history-substring-search:color' not-found 'fg=009'
 
 # Set the search globbing flags.
 # zstyle ':prezto:module:history-substring-search' globbing-flags ''
-# zstyle ':prezto:module:history-substring-search' globbing-flags 'l'
 
 #
 # Pacman
@@ -82,7 +85,7 @@ zstyle ':prezto:module:history-substring-search:color' not-found 'fg=009'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'lambda'
+zstyle ':prezto:module:prompt' theme 'sorin'
 
 #
 # Ruby
@@ -121,10 +124,6 @@ zstyle ':prezto:module:prompt' theme 'lambda'
 #   'cursor' \
 #   'root'
 #
-zstyle ':prezto:module:syntax-highlighting' highlighters \
-  'main' \
-  'brackets' \
-  'root'
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \
 #   'builtin' 'bg=blue' \
@@ -136,15 +135,13 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 #
 
 # Auto set the tab and window titles.
-zstyle ':prezto:module:terminal' auto-title 'yes'
+# zstyle ':prezto:module:terminal' auto-title 'yes'
 
 # Set the window title format.
 # zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
-zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
 
 # Set the tab title format.
 # zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
-zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
 
 #
 # Tmux
@@ -155,6 +152,3 @@ zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
 
 # Auto start a session when Zsh is launched in a SSH connection.
 # zstyle ':prezto:module:tmux:auto-start' remote 'yes'
-
-# Integrate with iTerm2.
-# zstyle ':prezto:module:tmux:iterm' integrate 'yes'
